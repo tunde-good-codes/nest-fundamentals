@@ -9,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // weed away or does'nt allow ppt  not in payloadF
-    })
+    }),
   );
   app.useLogger(app.get(LoggerService));
   await app.listen(process.env.PORT ?? 8080);
